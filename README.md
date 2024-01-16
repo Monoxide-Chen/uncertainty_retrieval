@@ -74,7 +74,7 @@ CUDA_VISIBLE_DEVICES=0 python3 main.py --config_path=configs/fashionIQ_config.js
 author = "Chen, Yiyang and Zheng, Zhedong and Ji, Wei and Qu, Leigang and Chua, Tat-Seng",
 title = "Composed Image Retrieval with Text Feedback via Multi-grained Uncertainty Regularization",
 booktitle = "International Conference on Learning Representations (ICLR)",
-code = "https://github.com/Monoxide-Chen/uncertainty_retrieval",
+code = "https://github.com/Monoxide-Chen/uncertainty\_retrieval",
 year = "2024"
 }
 ```
