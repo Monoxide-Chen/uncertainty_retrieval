@@ -70,15 +70,12 @@ CUDA_VISIBLE_DEVICES=0 python3 main.py --config_path=configs/fashionIQ_config.js
 ## Citation
 
 ```bibtex
-@misc{https://doi.org/10.48550/arxiv.2211.07394,
-  doi = {10.48550/ARXIV.2211.07394},
-  url = {https://arxiv.org/abs/2211.07394},
-  author = {Chen, Yiyang and Zheng, Zhedong and Ji, Wei and Qu, Leigang and Chua, Tat-Seng},
-  keywords = {Computer Vision and Pattern Recognition (cs.CV), FOS: Computer and information sciences, FOS: Computer and information sciences},
-  title = {Composed Image Retrieval with Text Feedback via Multi-grained Uncertainty Regularization},
-  publisher = {arXiv},
-  year = {2022},
-  copyright = {arXiv.org perpetual, non-exclusive license}
+@inproceedings{chen2024composed,
+author = "Chen, Yiyang and Zheng, Zhedong and Ji, Wei and Qu, Leigang and Chua, Tat-Seng",
+title = "Composed Image Retrieval with Text Feedback via Multi-grained Uncertainty Regularization",
+booktitle = "International Conference on Learning Representations (ICLR)",
+code = "https://github.com/Monoxide-Chen/uncertainty\_retrieval",
+year = "2024"
 }
 ```
 
