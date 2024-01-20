@@ -2,7 +2,7 @@
 
 Offical Implementation of [Composed Image Retrieval with Text Feedback via Multi-grained Uncertainty Regularization](https://arxiv.org/abs/2211.07394). 
 
-![pipeline](fig/pipeline.png)
+![pipeline](docs/pipeline.png)
 
 The baseline code is borrowed from [CoSMo](https://github.com/postBG/CosMo.pytorch). We would like to thank this great work. 
 

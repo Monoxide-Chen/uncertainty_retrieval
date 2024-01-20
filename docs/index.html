@@ -1,0 +1,365 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+	body {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		font-weight: 300;
+		font-size: 24px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1100px;
+	}
+
+	h2 {
+		font-weight: 300;
+		text-align: center;
+		font-size: 30px;
+	}
+
+	.disclaimerbox {
+		background-color: #eee;
+		border: 1px solid #eeeeee;
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		padding: 20px;
+	}
+
+	video.header-vid {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+	}
+
+	img.header-img {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+	}
+
+	img.rounded {
+		border: 0px solid #eeeeee;
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+	}
+
+	a:link,
+	a:visited {
+		color: #1367a7;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: #208799;
+	}
+
+	td.dl-link {
+		height: 160px;
+		text-align: center;
+		font-size: 22px;
+	}
+
+	.layered-paper-big {
+		/* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+			0px 0px 1px 1px rgba(0, 0, 0, 0.35),
+			/* The top layer shadow */
+			5px 5px 0 0px #fff,
+			/* The second layer */
+			5px 5px 1px 1px rgba(0, 0, 0, 0.35),
+			/* The second layer shadow */
+			10px 10px 0 0px #fff,
+			/* The third layer */
+			10px 10px 1px 1px rgba(0, 0, 0, 0.35),
+			/* The third layer shadow */
+			15px 15px 0 0px #fff,
+			/* The fourth layer */
+			15px 15px 1px 1px rgba(0, 0, 0, 0.35),
+			/* The fourth layer shadow */
+			20px 20px 0 0px #fff,
+			/* The fifth layer */
+			20px 20px 1px 1px rgba(0, 0, 0, 0.35),
+			/* The fifth layer shadow */
+			25px 25px 0 0px #fff,
+			/* The fifth layer */
+			25px 25px 1px 1px rgba(0, 0, 0, 0.35);
+		/* The fifth layer shadow */
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+	.paper-big {
+		/* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+			0px 0px 1px 1px rgba(0, 0, 0, 0.35);
+		/* The top layer shadow */
+
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+	.layered-paper {
+		/* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+			0px 0px 1px 1px rgba(0, 0, 0, 0.35),
+			/* The top layer shadow */
+			5px 5px 0 0px #fff,
+			/* The second layer */
+			5px 5px 1px 1px rgba(0, 0, 0, 0.35),
+			/* The second layer shadow */
+			10px 10px 0 0px #fff,
+			/* The third layer */
+			10px 10px 1px 1px rgba(0, 0, 0, 0.35);
+		/* The third layer shadow */
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 30px;
+		margin-bottom: 5px;
+	}
+
+	.vert-cent {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	hr {
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+
+	p, li {
+		font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times, serif;
+		font-size: 16px;
+		line-height: 1.4em;
+		text-align: justify;
+	}
+
+	p {
+		text-indent: 2em;
+	}
+
+	.caption {
+		font-size: 16px;
+		text-align: center;
+		text-indent: 0em;
+	}
+
+	main {
+		width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 200px;
+	}
+
+	.namerow {
+		display: flex;
+		justify-content: space-around;
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+
+	.namerow > div {
+		font-size: 18px;
+	}
+
+	.schoolrow {
+		display: flex;
+		justify-content: space-evenly;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		flex-wrap: wrap;
+	}
+
+	.schoolrow > div {
+		font-size: 16px;
+	}
+
+	.urlrow {
+		display: flex;
+		justify-content: space-evenly;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		margin-left: 100px;
+		margin-right: 100px;
+	}
+
+	.paper {
+		display: flex;
+		align-items: center;
+		margin-left: 70px;
+		margin-right: 70px;
+	}
+</style>
+
+<html>
+
+<head>
+	<title>Composed Image Retrieval with Text Feedback via Multi-Grained Uncertainty Regularization</title>
+	<meta property="og:image" content="https://github.com/layumi/DG-Net/blob/master/NxN.jpg" />
+	<meta property="og:title"
+		content="Composed Image Retrieval with Text Feedback via Multi-Grained Uncertainty Regularization. In ICLR, 2024." />
+	<meta property="og:url" content="https://monoxide-chen.github.io/uncertainty_retrieval/" />
+	<meta name='description'
+		content="The project page of Composed Image Retrieval with Text Feedback via Multi-Grained Uncertainty Regularization. In ICLR, 2024. Multi-Retreival. Yiyang Chen, Zhedong Zheng, Tat-seng Chua." />
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<main>
+	<center>
+		<span style="font-size:34px">Composed Image Retrieval with Text Feedback via Multi-Grained Uncertainty
+			Regularization</span><br>
+		<div class="namerow">
+			<div>
+				<a href="https://github.com/Monoxide-Chen/">Yiyang Chen</a><sup>1,2</sup>
+			</div>
+			<div>
+				<a href="http://zdzheng.xyz/">Zhedong Zheng</a><sup>1,3</sup>
+			</div>
+			<div>
+				<a href="https://jiwei0523.github.io/">Wei Ji</a><sup>1</sup>
+			</div>
+			<div>
+				<a href="">Leigang Qu</a><sup>1</sup>
+			</div>
+			<div>
+				<a href="https://www.chuatatseng.com/">Tat-seng Chua</a><sup>1</sup>
+			</div>
+		</div>
+
+		<div class="schoolrow">
+			<div style="margin-right: 2em;">
+				<sup>1</sup>Sea-NExT Joint Lab, National University of Singapore
+			</div>
+			<div>
+				<sup>2</sup>Tsinghua University
+			</div>
+			<div>
+				<sup>3</sup>Faculty of Science and Technology, and Institute of	Collaborative Innovation, University of Macau
+			</div>
+		</div>
+		<div class="urlrow">
+			<div>
+				Code<a href='https://github.com/Monoxide-Chen/uncertainty_retrieval'>[GitHub]</a>
+			</div>
+			<div>
+				Paper<a href="https://arxiv.org/abs/2211.07394"> [arXiv]</a>
+			</div>
+			<div>
+				Cite<a href="bibtex.txt"> [BibTeX]</a>
+			</div>
+		</div>
+	</center>
+
+	<hr>
+
+	<h2>Abstract</h2>
+	<p>
+		We investigate composed image retrieval with text feedback. Users gradually look for the target of interest by
+		moving from coarse to fine-grained feedback. However, existing methods merely focus on the latter, i.e.,
+		fine-grained search, by harnessing positive and negative pairs during training. This pair-based paradigm only
+		considers the one-to-one distance between a pair of specific points, which is not aligned with the one-to-many
+		coarse-grained retrieval process and compromises the recall rate.
+	</p>
+	<p style="margin-bottom:0.5em;">
+		In an attempt to fill this gap, we introduce a unified learning approach to simultaneously modeling the coarse- and fine-grained retrieval by considering the
+		multi-grained uncertainty. The key idea underpinning the proposed method is to integrate fine- and
+		coarse-grained retrieval as matching data points with small and large fluctuations, respectively. Specifically,
+		our method contains two modules: uncertainty modeling and uncertainty regularization.
+		<!-- <br> -->
+	</p>
+	<ul style="margin-top:0.5em;">
+		<li>The uncertainty	modeling simulates the multi-grained queries by introducing identically distributed fluctuations in the feature
+			space.
+		</li>
+		<li>
+			Based on the uncertainty modeling, we further introduce uncertainty regularization to adapt the
+			matching objective according to the fluctuation range. Compared with existing methods, the proposed strategy
+			explicitly prevents the model from pushing away potential candidates in the early stage, and thus improves the
+			recall rate. On the three public datasets, i.e., FashionIQ, Fashion200k, and Shoes, the proposed method has
+			achieved +4.03%, +3.38%, and +2.40% Recall@50 accuracy over a strong baseline, respectively.
+		</li>
+	</ul>
+	<!-- <br> -->
+	<hr>
+
+
+	<h2>Architecture</h2>
+	<p>
+		The overview of our network. Our main contributions are the uncertainty modeling via augmenter,
+		and the uncertainty regularization for coarse matching. Our model applies both the fine-grained
+		matching and the proposed coarse-grained uncertainty regularization, facilitating the model training.
+	</p>
+	<p>
+		<center>
+			<img class="round" style="width:800px" src="pipeline.png" /></a>
+		</center>
+	</p>
+
+
+	<hr>
+
+	<h2>Results</h2>
+	<p>
+		Without loss of generability, we verify the effectiveness of the proposed method on the fashion datasets, which collect
+		the feedback from customers easily, including <strong>FashionIQ</strong>, <strong>Fashion200k</strong> and <strong>Shoes</strong>. 
+		Each image in these fashion datasets is	tagged with descriptive texts as product description, such as 'similar style t-shirt
+		but white logo print'.
+	</p>
+
+	<p>
+		<center>
+			<img class="round" style="width:700px" src="result1.png" /></a>
+		</center>
+	</p>
+	<p class="caption">
+		Results on FashionIQ.
+	</p>
+	<p>
+		<center>
+			<img class="round" style="width:600px" src="result2.png" /></a>
+		</center>
+	</p>
+	<p class="caption">
+		Results on Fashion200k and Shoes.
+	</p>
+	<hr>
+
+	<h2>Paper</h2>
+	<div class="paper">
+		<div>
+			<img class="layered-paper-big" style="height:175px"	src="paper01.png" />
+		</div>
+		<div>
+			<span style="font-size:12pt">Y. Chen, Z. Zheng, W. Ji, L. Qu, T. Chua.</span><br>
+		<b><span style="font-size:12pt">Composed Image Retrieval with Text Feedback via Multi-Grained Uncertainty
+				Regularization.</b></span><br>
+		<span style="font-size:12pt">ICLR, 2024 <a href="https://arxiv.org/abs/2211.07394">[ArXiv]</a></span>.
+		</div>
+	</div>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-75863369-5"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-75863369-5');
+	</script>
+
+
+</main>
+</body>
+
+</html>
