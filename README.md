@@ -55,6 +55,13 @@ Copy the dataset folders to the data folder. The data folder is structured as fo
 │   │   ├── ...
 ```
 
+## The Core Code
+Core code is relatively simple, and could be directly applied to other works.
+
+- Uncertainty Model : [normal_augmenter.py#L21](https://github.com/Monoxide-Chen/uncertainty_retrieval/blob/main/models/augmenter/normal_augmenter.py#L21)
+- Uncertainty Regularization : [uncertainty_loss.py#56](https://github.com/Monoxide-Chen/uncertainty_retrieval/blob/main/losses/uncertainty_loss.py#56)
+
+
 ## Weights & Biases
 
 We use [Weights and Biases](https://wandb.ai/) to log our experiments. You can register an account or provide an existing one, head it over to `*config.json` and fill out your `wandb_account_name`.You can also change the default at `options/command_line.py`.
